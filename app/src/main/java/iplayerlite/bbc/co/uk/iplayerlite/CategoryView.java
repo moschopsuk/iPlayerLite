@@ -1,10 +1,10 @@
 package iplayerlite.bbc.co.uk.iplayerlite;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 
 import com.android.volley.Request;
@@ -22,7 +22,9 @@ import iplayerlite.bbc.co.uk.iplayerlite.models.CategoryItem;
 public class CategoryView extends AppCompatActivity {
 
     private static final String IPAYER_IBL_CATEGORIES = "http://ibl.api.bbci.co.uk/ibl/v1/Categories?rights=mobile";
-    private ArrayList<CategoryItem> catagories;
+    public final static String MESSAGE = "uk.co.bbc.iplayerlite.MESSAGE";
+
+    private ArrayList<CategoryItem> categories;
     final Gson gson = new Gson();
 
     private RecyclerView recyclerView;
@@ -34,14 +36,14 @@ public class CategoryView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category_view);
 
-        catagories = new ArrayList<>();
+        categories = new ArrayList<>();
 
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        adapter = new CategoryAdapter(catagories);
+        adapter = new CategoryAdapter(categories);
         recyclerView.setAdapter(adapter);
 
         RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(this, LinearLayoutManager.VERTICAL);
@@ -56,8 +58,8 @@ public class CategoryView extends AppCompatActivity {
                 @Override
                 public void onResponse(String rawResponse) {
                     Categories response = gson.fromJson(rawResponse, Categories.class);
-                    catagories = response.getCategoriesList();
-                    ((CategoryAdapter) adapter).updateCategories(catagories);
+                    categories = response.getCategoriesList();
+                    ((CategoryAdapter) adapter).updateCategories(categories);
                     adapter.notifyDataSetChanged();
                 }
             },
@@ -80,7 +82,9 @@ public class CategoryView extends AppCompatActivity {
 
                     @Override
                     public void onItemClick(int position, View v) {
-                        Log.i("CATEGORY", catagories.get(position).getId());
+                        Intent intent = new Intent(v.getContext(), ShowListView.class);
+                        intent.putExtra(MESSAGE, categories.get(position).getId());
+                        startActivity(intent);
                     }
                 }
         );

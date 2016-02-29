@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import iplayerlite.bbc.co.uk.iplayerlite.models.CategoryItem;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder> {
-    private ArrayList<CategoryItem> catagoriesList;
+    private ArrayList<CategoryItem> categoriesList;
     private static MyClickListener myClickListener;
 
     public static class CategoryViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -32,11 +32,11 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
     }
 
     public CategoryAdapter(ArrayList<CategoryItem> categories) {
-        catagoriesList = categories;
+        categoriesList = categories;
     }
 
     public void updateCategories(ArrayList<CategoryItem> categories) {
-        catagoriesList = categories;
+        categoriesList = categories;
     }
 
     public void setOnItemClickListener(MyClickListener myClickListener) {
@@ -54,13 +54,13 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
 
     @Override
     public void onBindViewHolder(CategoryViewHolder holder, int position) {
-        holder.label.setText(catagoriesList.get(position).getTitle());
-        holder.id.setText(catagoriesList.get(position).getId());
+        holder.label.setText(categoriesList.get(position).getTitle());
+        holder.id.setText(categoriesList.get(position).getId());
     }
 
     @Override
     public int getItemCount() {
-        return catagoriesList.size();
+        return categoriesList.size();
     }
 
     public interface MyClickListener {
