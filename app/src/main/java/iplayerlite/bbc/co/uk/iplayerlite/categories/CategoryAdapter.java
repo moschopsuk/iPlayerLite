@@ -22,7 +22,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         public CategoryViewHolder(View v) {
             super(v);
             label = (TextView) itemView.findViewById(R.id.textView);
-            id = (TextView) itemView.findViewById(R.id.textView2);
             itemView.setOnClickListener(this);
         }
 
@@ -56,7 +55,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
     @Override
     public void onBindViewHolder(CategoryViewHolder holder, int position) {
         holder.label.setText(categoriesList.get(position).getTitle());
-        holder.id.setText(categoriesList.get(position).getId());
     }
 
     @Override

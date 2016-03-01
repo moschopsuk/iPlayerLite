@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">iPlayer Lite</string>
+    <string name="title_activity_watch">WatchActivity</string>
 </resources>

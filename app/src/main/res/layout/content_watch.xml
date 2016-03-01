@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    tools:context=".watch.WatchView">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         >
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/brand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/thumbnail"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:textColor="#ccc"
+            android:textStyle="bold"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/brand"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:textColor="#ccc"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/synopses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subtitle"
+            android:padding="4dp"
+            android:textColor="#fff"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/synopses"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:textColor="#ccc"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/firstShown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/duration"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:textColor="#ccc"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/remain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/firstShown"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:textColor="#ccc"
+            android:textSize="14dp" />
+
+    </RelativeLayout>
+</ScrollView>
+    </LinearLayout>
+
+
+

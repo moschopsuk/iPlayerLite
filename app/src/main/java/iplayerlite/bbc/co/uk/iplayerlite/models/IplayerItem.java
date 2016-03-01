@@ -10,10 +10,19 @@ public class IplayerItem {
     private Ichef images;
     private Boolean signed;
     private String status;
+
+    public Brand getMasterBrand() {
+        return master_brand;
+    }
+
     private String tleo_id;
     private Boolean guidance;
     private String subtitle;
     private Synopses synopses;
+
+    public ArrayList<MediaVersion> getVersions() {
+        return versions;
+    }
 
     private ArrayList<MediaVersion> versions = new ArrayList<MediaVersion>();
 

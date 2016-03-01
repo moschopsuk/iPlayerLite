@@ -18,8 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".highlights.HighLightsView" />
+        <activity android:name=".watch.WatchView" />
     </application>
 
 </manifest>
