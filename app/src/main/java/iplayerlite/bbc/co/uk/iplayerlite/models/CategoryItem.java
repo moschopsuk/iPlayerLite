@@ -6,7 +6,7 @@ public class CategoryItem {
     private String type;
     private String kind;
 
-    public CategoryItem(String id, String tile, String type, String kind) {
+    public CategoryItem(String id, String title, String type, String kind) {
         this.id = id;
         this.title = title;
         this.type = type;

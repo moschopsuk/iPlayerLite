@@ -1,4 +1,4 @@
-package iplayerlite.bbc.co.uk.iplayerlite;
+package iplayerlite.bbc.co.uk.iplayerlite.categories;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -16,6 +16,9 @@ import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
+import iplayerlite.bbc.co.uk.iplayerlite.utils.DividerItemDecoration;
+import iplayerlite.bbc.co.uk.iplayerlite.R;
+import iplayerlite.bbc.co.uk.iplayerlite.highlights.HighLightsView;
 import iplayerlite.bbc.co.uk.iplayerlite.models.Categories;
 import iplayerlite.bbc.co.uk.iplayerlite.models.CategoryItem;
 
@@ -82,7 +85,7 @@ public class CategoryView extends AppCompatActivity {
 
                     @Override
                     public void onItemClick(int position, View v) {
-                        Intent intent = new Intent(v.getContext(), ShowListView.class);
+                        Intent intent = new Intent(v.getContext(), HighLightsView.class);
                         intent.putExtra(MESSAGE, categories.get(position).getId());
                         startActivity(intent);
                     }

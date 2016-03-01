@@ -1,4 +1,4 @@
-package iplayerlite.bbc.co.uk.iplayerlite;
+package iplayerlite.bbc.co.uk.iplayerlite.categories;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import iplayerlite.bbc.co.uk.iplayerlite.R;
 import iplayerlite.bbc.co.uk.iplayerlite.models.CategoryItem;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder> {

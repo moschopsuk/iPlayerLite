@@ -13,6 +13,6 @@ public class Categories {
 
     @Override
     public String toString() {
-        return "Version:" + version + ", Catagories:" + categories.size();
+        return "Version:" + version + ", Categories:" + categories.size();
     }
 }

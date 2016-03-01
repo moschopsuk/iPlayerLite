@@ -1,4 +1,4 @@
-package iplayerlite.bbc.co.uk.iplayerlite;
+package iplayerlite.bbc.co.uk.iplayerlite.utils;
 
 import android.content.Context;
 import android.content.res.TypedArray;
